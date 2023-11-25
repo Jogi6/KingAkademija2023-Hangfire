@@ -8,6 +8,8 @@ namespace Application.Common.Interfaces
 	public interface IAcademyDbContext
 	{
 		public DbSet<Test> Tests { get; set; }
-		Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+        public DbSet<Domain.Entities.ExchangeRate> exchangeRates { get; set; }
+
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 	}
 }

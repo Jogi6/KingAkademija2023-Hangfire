@@ -15,7 +15,7 @@ namespace Infrastructure.Persistence.Context
 		}
 
 		public DbSet<Test> Tests { get; set; }
-
+		public DbSet<Domain.Entities.ExchangeRate> exchangeRates { get; set; }
 		public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
 		{
 			foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
